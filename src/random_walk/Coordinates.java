@@ -1,4 +1,4 @@
-package selfavoidingwalk;
+package random_walk;
 
 import java.util.Arrays;
 

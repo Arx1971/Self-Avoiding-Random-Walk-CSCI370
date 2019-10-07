@@ -1,4 +1,4 @@
-package selfavoidingwalk;
+package random_walk;
 
 public class PolygonWalkDriver {
 
