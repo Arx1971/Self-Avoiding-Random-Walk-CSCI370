@@ -41,5 +41,7 @@
     <li>In this project, we shall only consider self-avoiding random walks on integer grids.</li>
     <li>Every random walk always starts at the origin.</li>
     <li> Figure 1</li>
-    ![alt text]https://github.com/Arx1971/Self-Avoiding-Random-Walk-CSCI370/blob/master/LERW.png)
+   <img src="https://github.com/Arx1971/Self-Avoiding-Random-Walk-CSCI370/blob/master/LERW.png"
+        alt="Self Avoiding Random Walk"
+        style="float: left; margin-right: 10px;" />
 </ul>
