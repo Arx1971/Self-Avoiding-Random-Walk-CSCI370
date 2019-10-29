@@ -45,3 +45,30 @@
         alt="Self Avoiding Random Walk"
         style="float: left; margin-right: 10px;" />
 </ul>
+
+<h2>Result</h2>
+<ul>
+    <h3>2D Self Avoiding Random Walk</h3>
+    <li>The mean (or average) of the end-to-end squared distance is given by the average:
+        <img src="https://github.com/Arx1971/Self-Avoiding-Random-Walk-Data-Analysis/blob/master/img_source/2d_R.png"
+                    alt="Self Avoiding Random Walk"
+                    style="float: left; margin-right: 10px;" />
+    </li>
+    <h3>3D Self Avoiding Random Walk</h3>
+        <li>The mean (or average) of the end-to-end squared distance is given by the average:
+            <img src="https://github.com/Arx1971/Self-Avoiding-Random-Walk-Data-Analysis/blob/master/img_source/3d_r.png"
+                        alt="Self Avoiding Random Walk"
+                        style="float: left; margin-right: 10px;" />
+    </li>
+     <h3>4D Self Avoiding Random Walk</h3>
+             <li>The mean (or average) of the end-to-end squared distance is given by the average:
+                 <img src="https://github.com/Arx1971/Self-Avoiding-Random-Walk-Data-Analysis/blob/master/img_source/4d_r.png"
+                             alt="Self Avoiding Random Walk"
+                             style="float: left; margin-right: 10px;" />
+         </li>
+          
+    
+    
+     
+    
+</ul> 
