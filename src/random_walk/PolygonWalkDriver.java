@@ -13,7 +13,7 @@ public class PolygonWalkDriver {
 
 		long start = System.currentTimeMillis();
 
-		PolygonWalk thread[] = new PolygonWalk[GlobalField.N_T];
+		PolygonWalk[] thread = new PolygonWalk[GlobalField.N_T];
 
 		for (int i = 0; i < GlobalField.N_T; i++) {
 			thread[i] = new PolygonWalk(dimensionSize);
@@ -38,9 +38,9 @@ public class PolygonWalkDriver {
 
 			}
 
-			double fsaw = (double) (N_SAW_POLYGON) / (GlobalField.N_T * GlobalField.N_SAW);
+			double fSaw = (double) (N_SAW_POLYGON) / (GlobalField.N_T * GlobalField.N_SAW);
 
-			System.out.println(i + "\t" + fsaw);
+			System.out.println(i + "\t" + fSaw);
 
 		}
 

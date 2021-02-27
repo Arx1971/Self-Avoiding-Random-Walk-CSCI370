@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Coordinates {
 
-	int arr[];
+	int[] arr;
 
-	public Coordinates(int a[]) {
+	public Coordinates(int[] a) {
 		this.arr = a.clone();
 	}
 
@@ -32,9 +32,7 @@ public class Coordinates {
 		if (getClass() != obj.getClass())
 			return false;
 		Coordinates other = (Coordinates) obj;
-		if (!Arrays.equals(arr, other.arr))
-			return false;
-		return true;
+		return Arrays.equals(arr, other.arr);
 	}
 
 }

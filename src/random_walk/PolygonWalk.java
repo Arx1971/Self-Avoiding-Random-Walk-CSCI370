@@ -17,7 +17,7 @@ public class PolygonWalk extends Thread {
 		this.dimensionSize = dimensionSize;
 	}
 
-	public void selfavoidingPolygon() {
+	public void selfAvoidingPolygon() {
 
 		for (int i = 1; i <= GlobalField.steps; i++) {
 			dataSet.put(i, 0);
@@ -63,14 +63,13 @@ public class PolygonWalk extends Thread {
 
 				boolean tmp = visited.contains(obj);
 
-				if (tmp == false) {
+				if (!tmp) {
 					visited.add(obj);
-				} else if (tmp == true) {
+				} else {
 					if (obj.equals(origin)) {
 						dataSet.put(j, dataSet.get(j) + 1);
-						break;
-					} else
-						break;
+					}
+					break;
 				}
 
 			}
@@ -80,7 +79,7 @@ public class PolygonWalk extends Thread {
 	}
 
 	public void run() {
-		selfavoidingPolygon();
+		selfAvoidingPolygon();
 	}
 
 }

@@ -2,7 +2,7 @@ package random_walk;
 
 public class Main {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
 		SelfAvoidingWalkDriver dimension2d = new SelfAvoidingWalkDriver(2);
 		SelfAvoidingWalkDriver dimension3d = new SelfAvoidingWalkDriver(3);

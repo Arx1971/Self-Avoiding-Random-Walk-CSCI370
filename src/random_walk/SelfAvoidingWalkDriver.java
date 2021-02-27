@@ -15,7 +15,7 @@ public class SelfAvoidingWalkDriver {
 	public void calculation() {
 		long start = System.currentTimeMillis();
 
-		SelfAvoidingWalk threads[] = new SelfAvoidingWalk[GlobalField.N_T];
+		SelfAvoidingWalk[] threads = new SelfAvoidingWalk[GlobalField.N_T];
 
 		for (int i = 0; i < GlobalField.N_T; i++) {
 			threads[i] = new SelfAvoidingWalk(dimensionSize);
@@ -30,37 +30,37 @@ public class SelfAvoidingWalkDriver {
 			}
 		}
 
-		Map<Integer, Simulator> globaldataSet = new ConcurrentHashMap<>();
+		Map<Integer, Simulator> simulatorConcurrentHashMap = new ConcurrentHashMap<>();
 
 		for (int i = 1; i <= GlobalField.steps; i++) {
-			globaldataSet.put(i, new Simulator(0.0, 0));
+			simulatorConcurrentHashMap.put(i, new Simulator(0.0, 0));
 		}
 
 		for (int i = 0; i < GlobalField.N_T; i++) {
 
-			Map<Integer, Simulator> localdataSet = threads[i].dataSet;
+			Map<Integer, Simulator> localSimulatorMap = threads[i].dataSet;
 
 			for (int j = 10; j <= GlobalField.steps; j++) {
 
-				Simulator localobj = localdataSet.get(j);
-				Simulator globalobj = globaldataSet.get(j);
+				Simulator localObj = localSimulatorMap.get(j);
+				Simulator globalObj = simulatorConcurrentHashMap.get(j);
 
-				double dt = localobj.rSquare + globalobj.rSquare;
-				int sz = localobj.size + globalobj.size;
+				double dt = localObj.rSquare + globalObj.rSquare;
+				int sz = localObj.size + globalObj.size;
 
-				globaldataSet.put(j, new Simulator(dt, sz));
+				simulatorConcurrentHashMap.put(j, new Simulator(dt, sz));
 
 			}
 		}
 
 		for (int i = 10; i <= 40; i++) {
 
-			Simulator obj = globaldataSet.get(i);
+			Simulator obj = simulatorConcurrentHashMap.get(i);
 
 			double dt = obj.rSquare;
 			int sz = obj.size;
-			double fsaw = (double) (sz) / (GlobalField.N_T * GlobalField.N_SAW);
-			System.out.println(i + "\t" + dt / sz + "\t" + fsaw);
+			double fSaw = (double) (sz) / (GlobalField.N_T * GlobalField.N_SAW);
+			System.out.println(i + "\t" + dt / sz + "\t" + fSaw);
 
 		}
 

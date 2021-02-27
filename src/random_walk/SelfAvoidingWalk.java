@@ -64,7 +64,7 @@ public class SelfAvoidingWalk extends Thread {
 
 				boolean tmp = visited.contains(obj);
 
-				if (tmp == false) {
+				if (!tmp) {
 
 					visited.add(obj);
 
